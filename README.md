@@ -1,3 +1,21 @@
+A. The Executive Summary
+Most deliveries were on time, but about 4% were late and 3% were super late. These delays, though relatively small, strongly drove negative customer sentiment. Certain states and bUlky product categories are disproportionately affected, highlighting logistics bottlenecks. Improving delivery estimates and focusing on high risk regions and categories will restore customer trust.
+
+B. Project Links
+Notebook - https://github.com/jatosam04-ops/olist-delivery-audit/blob/main/delivery_audit.ipynb
+Dashboard - https://lookerstudio.google.com/reporting/2769623f-2690-44e1-9a27-5a099d2a8ffc
+Presentation - https://1drv.ms/p/c/7c78e1663ff93b69/IQAkxqGTSAhRTZPA1y0-DG9cAQilgE8RoAsgdLwo-r5uYFs?e=NUNnuo
+
+C. Technical Explanation
+Data Cleaning
+- Loaded raw CSVs (`orders`, `reviews`, `customers`, `products`, `translations`) into the notebook.
+- Converted date columns to proper datetime format.
+- Joined tables carefully to avoid row duplication:
+- Excluded canceled/unavailable orders from delay calculations.
+- Handled missing values by flagging “No Delivery” cases.
+My Choice Feature
+I added "delivery Performance by Product Category". This analysis highlights which categories are most prone to delays (e.g., furniture vs. electronics). This matters because it helps Veridi Logistics identify operational bottlenecks tied to product type—bulky or fragile items may require special handling, and knowing this allows targeted improvements in packaging, routing, or carrier selection.
+
 # Project Brief: The "Last Mile" Logistics Auditor
 
 **Client:** Veridi Logistics (Global E-Commerce Aggregator)  
